@@ -1,0 +1,11 @@
+export ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+plugins=(git)
+export GOPATH=$HOME/work
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:$GOPATH/bin/"
+source $ZSH/oh-my-zsh.sh
+export PATH="/usr/local/sbin:$PATH"
+export EDITOR=vim

@@ -1,0 +1,7 @@
+- hosts: localhost
+  user: linuxdynasty
+  become: true
+  connection: local
+
+  roles:
+    - linuxdynasty

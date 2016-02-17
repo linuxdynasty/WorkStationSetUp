@@ -1,0 +1,6 @@
+hardstatus alwayslastline
+hardstatus string '%{b}[ %{B}%H %{g} ][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c  ]%{W}'
+startup_message off
+defscrollback 200000
+shelltitle linuxdynasty
+caption always

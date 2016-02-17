@@ -1,0 +1,20 @@
+- name: Clone oh-my-zsh repo
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: '/home/{{ user }}/.oh-my-zsh'
+
+- name: remove standard zshrc
+  file:
+    path: '/home/{{ user }}/.zshrc'
+    state: absent
+
+- name: deploy .zshrc
+  template:
+    src: files/zshrc
+    dest: '/home/{{ user }}/.zshrc'
+    owner: '{{ user }}'
+
+- name: Set zsh as default shell
+  user:
+    name: '{{ user }}'
+    shell: /usr//bin/zsh

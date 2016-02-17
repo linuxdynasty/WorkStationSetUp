@@ -1,5 +1,5 @@
 - name: deploy .screenrc
   template:
     src: files/screenrc
-    dest: '/home/{{ user }}/.screenrc'
+    dest: '{{ home_dir }}/.screenrc'
     owner: '{{ user }}'

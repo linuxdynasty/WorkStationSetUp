@@ -1,0 +1,9 @@
+packages:
+  - cmake
+  - macvim
+
+base_home: '/Users'
+
+go_tarball: "go1.6.darwin-amd64.tar.gz"
+go_tarball_checksum: "8b686ace24c0166738fd9f6003503f9d55ce03b7f24c963b043ba7bb56f43000"
+go_version_target: "go version go1.6 darwin/amd64"

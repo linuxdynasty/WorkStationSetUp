@@ -1,27 +1,9 @@
-- name: Add Docker repo key
-  apt_key:
-    url: https://apt.dockerproject.org/gpg
+- include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Add Docker repository
-  apt_repository:
-    repo: 'deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
-    update_cache: yes
-
-- name: Update the system and the kernel as well
-  apt:
-    upgrade: dist
-
-- name: Install base packages
-  apt:
-    name: "{{ item }}"
-  with_items: packages
+- include: debian_dependencies.yml
+  when: ansible_os_family == "Debian"
 
 - include: go.yml
 - include: zsh.yml
 - include: screen.yml
-
-- user:
-    name: '{{ user }}'
-    shell: /usr/bin/zsh
-    groups: sudo,docker
-    append: yes
+- include: vim.yml

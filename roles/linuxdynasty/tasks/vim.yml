@@ -1,0 +1,45 @@
+- name: deploy .vimrc
+  copy:
+    src: files/vimrc
+    dest: '{{ home_dir }}/.vimrc'
+    owner: '{{ user }}'
+
+- name: Create vim directory.
+  file:
+    path: '{{ home_dir }}/.vim/autoload/'
+    state: directory
+    mode: 0755
+  become: yes
+  become_user: '{{ user }}'
+
+- name: Create Plugged directory.
+  file:
+    path: '{{ home_dir }}/.vim/plugged/'
+    state: directory
+    mode: 0755
+  become: yes
+  become_user: '{{ user }}'
+
+- name: Install Vim Plug
+  get_url:
+    url: 'http://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    dest: '{{ home_dir }}/.vim/autoload/plug.vim'
+  become: yes
+  become_user: '{{ user }}'
+
+- name: Clone YouCompleteMe
+  git:
+    repo: https://github.com/Valloric/YouCompleteMe.git
+    dest: '{{ home_dir }}/.vim/plugged/YouCompleteMe'
+
+- name: Install Vim Plugs
+  shell: >
+    vim -c "source {{ home_dir  }}/.vimrc" +PlugUpdate +qa
+  become: yes
+  become_user: '{{ user }}'
+
+- name: Update GoBinaries
+  shell: >
+    vim -c "source {{ home_dir }}/.vimrc" +GoUpdateBinaries +qa
+  become: yes
+  become_user: '{{ user }}'

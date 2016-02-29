@@ -456,6 +456,7 @@ vnoremap <leader>gb :Gblame<CR>
 let g:go_fmt_fail_silently = 0
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
+let g:go_metalinter_autosave =1
 
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
@@ -467,6 +468,7 @@ au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
 au FileType go nmap <Leader>in <Plug>(go-info)
 au FileType go nmap <Leader>ii <Plug>(go-implements)
+au FileType go nmap <Leader>l <Plug>(go-metalinter)
 
 au FileType go nmap <leader>r  <Plug>(go-run)
 au FileType go nmap <leader>b  <Plug>(go-build)
@@ -560,6 +562,7 @@ set shiftround              " rounds indent to a multiple of shiftwidth
 set matchpairs+=<:>         " show matching <> (html mainly) as well
 set foldmethod=indent       " allow us to fold on indents
 set foldlevel=99            " don't fold by default
+set colorcolumn=79          "SHOW ME THE STOP SIGN :)
 
 
 

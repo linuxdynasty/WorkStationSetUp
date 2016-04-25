@@ -7,6 +7,11 @@
     repo: 'deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
     update_cache: yes
 
+- name: Add Tmux repository
+  apt_repository:
+    repo: 'ppa:pi-rho/dev'
+    update_cache: yes
+
 - name: Update the system and the kernel as well
   apt:
     upgrade: dist

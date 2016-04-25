@@ -1,0 +1,12 @@
+---
+- block:
+  - name: Get keybase
+    get_url:
+      url: 'https://dist.keybase.io/linux/deb/keybase-latest-amd64.deb'
+      dest: '{{ home_dir }}/keybase-latest-amd64.deb'
+
+  - name: Install keybase
+    apt:
+      deb: '{{ home_dir }}/keybase-latest-amd64.deb'
+
+  when: ansible_os_family == "Debian"

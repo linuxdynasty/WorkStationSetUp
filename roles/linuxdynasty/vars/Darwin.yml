@@ -1,6 +1,7 @@
 packages:
   - cmake
   - macvim
+  - keybase
 
 base_home: '/Users'
 

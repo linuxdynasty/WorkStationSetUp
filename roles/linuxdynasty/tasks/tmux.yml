@@ -1,0 +1,6 @@
+---
+- name: deploy .tmux.conf
+  copy:
+    src: files/tmux.conf
+    dest: '{{ home_dir }}/.tmux.conf'
+    owner: '{{ user }}'

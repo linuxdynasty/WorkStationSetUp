@@ -3,7 +3,7 @@ packages:
   - cmake
   - exuberant-ctags
   - libffi-dev
-  - openssl-dev
+  - libssl-dev
   - python-dev
   - docker-engine
   - vim

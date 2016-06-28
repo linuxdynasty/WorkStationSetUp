@@ -2,6 +2,8 @@ packages:
   - build-essential
   - cmake
   - exuberant-ctags
+  - libffi-dev
+  - openssl-dev
   - python-dev
   - docker-engine
   - vim

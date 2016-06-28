@@ -1,4 +1,4 @@
-sudo apt-get -y install python-dev python-pip git;\
+sudo apt-get -y install python-dev python-pip git libssl-dev libffi-dev;\
     sudo pip install ansible;\
     mkdir -p linuxdynasty;\
     cd linuxdynasty;\

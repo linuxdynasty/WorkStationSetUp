@@ -17,7 +17,6 @@ Plug 'garyburd/go-explorer'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'itchyny/lightline.vim'
 Plug 'JazzCore/ctrlp-cmatcher', {'do': './install.sh'}
-Plug 'kevinw/pyflakes-vim'
 Plug 'klen/python-mode'
 Plug 'kchmck/vim-coffee-script', {'for' : 'coffee'}
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -582,7 +581,7 @@ let g:pymode_doc_key = 'K'
 
 "Linting
 let g:pymode_lint = 1
-let g:pymode_lint_checker = "pylint,pyflakes,pep8"
+let g:pymode_lint_checker = "pylint,syntastic,pep8"
 " Auto check on save
 let g:pymode_lint_write = 0
 
@@ -608,8 +607,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-" Don't let pyflakes use the quickfix window
-let g:pyflakes_use_quickfix = 0
 
 " Add the virtualenv's site-packages to vim path
 py << EOF

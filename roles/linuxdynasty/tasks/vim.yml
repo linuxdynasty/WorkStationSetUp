@@ -3,6 +3,8 @@
     src: files/vimrc
     dest: '{{ home_dir }}/.vimrc'
     owner: '{{ user }}'
+  become: yes
+  become_user: '{{ user }}'
 
 - name: Create vim directory.
   file:
@@ -31,6 +33,8 @@
   git:
     repo: https://github.com/Valloric/YouCompleteMe.git
     dest: '{{ home_dir }}/.vim/plugged/YouCompleteMe'
+  become: yes
+  become_user: '{{ user }}'
 
 - name: Install Vim Plugs
   shell: >

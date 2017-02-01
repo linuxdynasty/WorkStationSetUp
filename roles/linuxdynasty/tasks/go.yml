@@ -31,5 +31,6 @@
   become_user: '{{ user }}'
   environment:
     GOPATH: '{{ gopath }}'
+    GOROOT: '{{ gobase }}'
     PATH: '{{ ansible_env.PATH }}:{{ gobase }}/bin'
-  with_items: godeps
+  with_items: '{{ godeps }}'

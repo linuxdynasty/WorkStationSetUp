@@ -5,6 +5,6 @@ packages:
 
 base_home: '/Users'
 
-go_tarball: "go1.6.2.darwin-amd64.tar.gz"
-go_tarball_checksum: "3acb72fc5da5b6b12b683a4cd13b5be2f6e976b0342436844d881bf7fc50dcc9"
-go_version_target: "go version go1.6.2 darwin/amd64"
+go_tarball: "go1.7.4.darwin-amd64.tar.gz"
+go_tarball_checksum: "f86c727012e33f3f482b049281aaee24211fe29dfafd121d93f32799a6b6ba2d"
+go_version_target: "go version go1.7.4 darwin/amd64"

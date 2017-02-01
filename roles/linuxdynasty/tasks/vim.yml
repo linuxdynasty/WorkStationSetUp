@@ -38,12 +38,12 @@
 
 - name: Install Vim Plugs
   shell: >
-    vim -c "source {{ home_dir  }}/.vimrc" +PlugUpdate +qa
+    vim -c "source {{ home_dir  }}/.vimrc" +PlugInstall +qa
   become: yes
   become_user: '{{ user }}'
 
 - name: Update GoBinaries
   shell: >
-    vim -c "source {{ home_dir }}/.vimrc" +GoUpdateBinaries +qa
+    vim -c "source {{ home_dir }}/.vimrc" +GoInstallBinaries +qa
   become: yes
   become_user: '{{ user }}'

@@ -20,7 +20,7 @@
 - name: Install base packages
   apt:
     name: "{{ item }}"
-  with_items: packages
+  with_items: "{{ packages }}"
 
 - user:
     name: '{{ user }}'

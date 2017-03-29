@@ -182,14 +182,14 @@ if has("gui_macvim")
 else
   "syntax enable
   "let g:molokai_original=1
-  "colorscheme molokai
+  colorscheme molokai
   "highlight SignColumn guibg=#272822
   "set t_Co=256
   
    syntax enable
    set t_Co=256
    set background=dark
-   colorscheme gruvbox
+   "colorscheme gruvbox
    let g:gruvbox_contrast_dark = "hard"
 
   "syntax enable

@@ -2,6 +2,7 @@ set shell=/bin/bash
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'cespare/vim-toml', {'for' : 'toml'}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'corylanou/vim-present', {'for' : 'present'}
